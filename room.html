@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameLink Room</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="room-container">
+        <header class="room-header">
+            <div class="room-info">
+                <h1><i class="fas fa-gamepad"></i> GameLink Room</h1>
+                <p id="roomCodeDisplay">Room Code: Loading...</p>
+            </div>
+            <button id="leaveRoomBtn" class="btn-leave">
+                <i class="fas fa-sign-out-alt"></i> Leave Room
+            </button>
+        </header>
+
+        <div class="room-content">
+            <div class="voice-section">
+                <h3><i class="fas fa-microphone"></i> Voice Chat</h3>
+                <div class="voice-controls">
+                    <button id="muteBtn" class="btn-voice">
+                        <i class="fas fa-microphone"></i> Mute
+                    </button>
+                    <button id="deafenBtn" class="btn-voice">
+                        <i class="fas fa-headphones"></i> Deafened
+                    </button>
+                    <div class="voice-status">
+                        <div class="status-indicator active"></div>
+                        <span>Voice Connected</span>
+                    </div>
+                </div>
+                
+                <div class="participants">
+                    <h4>In Room:</h4>
+                    <div id="participantsList">
+                        <div class="participant">
+                            <i class="fas fa-user"></i> You (Host)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="games-section">
+                <h3><i class="fas fa-dice"></i> Game Links</h3>
+                <div class="add-game">
+                    <input type="text" id="gameUrl" placeholder="Paste game link (Steam, Epic, etc.)">
+                    <input type="text" id="gameName" placeholder="Game name">
+                    <button id="addGameBtn" class="btn-add">
+                        <i class="fas fa-plus"></i> Add Game
+                    </button>
+                </div>
+                
+                <div id="gamesList" class="games-list">
+                    <div class="game-item">
+                        <div class="game-info">
+                            <h4>Valorant</h4>
+                            <p>https://playvalorant.com</p>
+                        </div>
+                        <button class="btn-play">
+                            <i class="fas fa-play"></i> Join
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-section">
+                <h3><i class="fas fa-comments"></i> Chat</h3>
+                <div id="chatMessages" class="chat-messages">
+                    <div class="message system">
+                        Welcome to the room! Share game links and start playing together.
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Type a message...">
+                    <button id="sendBtn">
+                        <i class="fas fa-paper-plane"></i> Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="room.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameLink - Play Together</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-gamepad"></i> GameLink</h1>
+            <p class="tagline">Play together, stay connected</p>
+        </header>
+
+        <main>
+            <div class="hero">
+                <h2>Create a gaming room in seconds</h2>
+                <p>Voice chat with friends while playing games together. No downloads required!</p>
+                
+                <div class="cta-section">
+                    <button id="createRoomBtn" class="btn-primary">
+                        <i class="fas fa-plus-circle"></i> Create New Room
+                    </button>
+                    
+                    <div class="join-section">
+                        <input type="text" id="roomCode" placeholder="Enter room code...">
+                        <button id="joinRoomBtn" class="btn-secondary">
+                            <i class="fas fa-sign-in-alt"></i> Join Room
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="roomLink" class="room-link" style="display: none;">
+                    <p>Share this link with your friends:</p>
+                    <div class="link-container">
+                        <input type="text" id="shareableLink" readonly>
+                        <button id="copyLinkBtn" class="btn-copy">
+                            <i class="far fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features">
+                <h3>How it works:</h3>
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-video"></i>
+                        <h4>Voice Chat</h4>
+                        <p>Talk with friends directly in your browser</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-user-friends"></i>
+                        <h4>Easy Join</h4>
+                        <p>Share a simple link with your gaming buddies</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-link"></i>
+                        <h4>Game Links</h4>
+                        <p>Share links to games you want to play together</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="online-users">
+                <h3><i class="fas fa-users"></i> Friends Online</h3>
+                <div id="onlineList" class="users-list">
+                    <div class="user">Alex - Playing Valorant</div>
+                    <div class="user">Sam - In Lobby</div>
+                    <div class="user">Jordan - Available</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with <i class="fas fa-heart"></i> for gamers | GameLink v1.0</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
